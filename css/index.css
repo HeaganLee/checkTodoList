@@ -12,7 +12,7 @@ body {
     margin: 50px auto;
     
     width: 800px;
-    height: 500px;
+    height: 550px;
     background-color: #e8827f;
     overflow: hidden;
 }
@@ -78,7 +78,9 @@ body {
 }
 
 .list-header {
-    font-size: 15px;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
     margin-bottom: 0px;
 }
 
@@ -145,7 +147,12 @@ body {
     border: none;
     background-color: #e8827f;
     color: white;
-    font-size: 20px;
+
+    font-family: 'Dongle', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    font-size: 30px;
+
     
 }
 
