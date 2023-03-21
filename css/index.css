@@ -113,7 +113,10 @@ body {
 .todo-createday {
     color: white;
 
-    font-size: 15px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 .todo-text {
