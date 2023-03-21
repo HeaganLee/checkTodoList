@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    color: #121212;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+}
+
+.main-content {
+    margin: 50px auto;
+    
+    width: 800px;
+    height: 500px;
+    background-color: #e8827f;
+    overflow: hidden;
+}
+
+.main-content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.main-header {
+    margin-top: 10px;
+    font-size: 60px;
+
+    background-color: #e8827f;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0%   {background-color:#e8827f; right:500px; top:0px;}
+    25%  {background-color:#e8827f; right:400px; top:0px;}
+    50%  {background-color:#e8827f; right:300px; top:0px;}
+    75%  {background-color:#e8827f; right:200px; top:0px;}
+    100% {background-color:#e8827f; right:0px; top:0px;}
+  }
+
+.input-todo-content {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-todo {
+    width: 500px;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+}
+
+.plus-button {
+    border: none;
+    background-color: #e8827f;
+
+    cursor: pointer;
+}
+
+.plus-button .fa-circle-plus {
+    font-size: 40px;
+}
+
+.todo-list-content-header {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.list-header {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.todo-list-content {
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    width: 800px;
+    height: 180px;
+
+    overflow: auto;
+}
+
+.todo-list {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 5px solid black;
+
+    width: 650px;
+    height: 50px;
+}
+
+.todo-createday {
+    color: white;
+
+    font-size: 15px;
+}
+
+.todo-text {
+    margin-left: 30px;
+
+    width: 400px;
+    height: 100%;
+
+    border: none;
+    background-color: #e8827f;
+}
+
+.todo-text:focus {
+    outline: none;
+    border: none;
+}
+
+.todo-list button {
+    width: 50px;
+    height: 100%;
+
+    border: none;
+    background-color: #e8827f;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.todo-list button:hover {
+    cursor: pointer;
+}
+
+.button-content {
+   margin-top: 20px;
+   width: 90%;
+
+   display: flex;
+   justify-content: end;
+}
+
+.button-content button {
+    margin-left: 10px;
+
+    border: none;
+    background-color: pink;
+    color: white;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
