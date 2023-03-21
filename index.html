@@ -5,11 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <title>checkTodoList</title>
 </head>
-<body>
-    <div class="main-content">
-        
+<body class="main-body">
+    <div class="hidden-video-content hidden-content">
+        <div class="hidden-video-content-main">
+            <div class="close-bar">
+                <button type="button" class="close-button">X</button>
+            </div>
+            <video class="hidden-video"  autoplay controls>
+                <source src="./video/test1.mp4" type="video/mp4">
+              </video>
+        </div>
     </div>
+
+    <div class="main-content">
+        <div class="main-content-header">
+            <h1 class="main-header">To Do List</h1>
+        </div>
+
+        <div class="input-todo-content">
+            <input type="text" class="input-todo" id="todo-input" placeholder="what will you do">
+            <button type="button" class="plus-button"><i class="fa-solid fa-circle-plus"></i></button> 
+        </div>
+
+        <div class = "todo-list-content-header">
+            
+        </div>
+
+        <div class="todo-list-content">
+
+        </div>
+
+        <div class="button-content">
+            <button type="button" class="all-delete-button">전체삭제</button>
+            <button type="button" class="selected-delete-button">선택삭제</button>
+        </div> 
+    </div>
+    
+    <script src="./js/video.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
