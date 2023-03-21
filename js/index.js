@@ -202,6 +202,7 @@ class TodoService {
     addPastListClear(saveDay) {
         const nowDate = new Date();
         const toDay = `${nowDate.getFullYear()}-${nowDate.getMonth()+1}-${nowDate.getDate()}`;
+        // const toDay = "2023-04-21";
         if(saveDay == null){
             return;
         }
