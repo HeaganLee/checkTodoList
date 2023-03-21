@@ -69,6 +69,10 @@ body {
     font-size: 40px;
 }
 
+.plus-button .fa-circle-plus:hover {
+    color: rgb(58, 50, 50);
+}
+
 .todo-list-content-header {
     width: 50%;
     margin-top: 20px;
@@ -163,3 +167,19 @@ body {
     cursor: pointer;
 }
 
+.all-delete-button:hover{
+    color: rgb(192, 197, 201);
+}
+
+.selected-delete-button:hover{
+    color: rgb(192, 197, 201);
+}
+
+.edit-button:hover{
+    color: rgb(192, 197, 201);
+}
+
+.delete-button:hover{
+    color: rgb(192, 197, 201);
+
+}

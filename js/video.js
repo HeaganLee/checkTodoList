@@ -22,6 +22,8 @@ class TodoEventVideo {
                 if(a + b == 30) {
                     const hiddenVideoCntent = document.querySelector(".hidden-video-content");
                     hiddenVideoCntent.classList.remove("hidden-content");
+                    const hiddenVideo = document.querySelector("hidden-video");
+                    hiddenVideo.autoplay = true;
                 }
             }
 
