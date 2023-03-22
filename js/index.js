@@ -1,5 +1,6 @@
 let todoList = new Array();
 let saveDay = "";
+let listCount = "";
 
 class TodoEvent {
     static #instance = null;
@@ -21,6 +22,7 @@ class TodoEvent {
             TodoService.getInstance().addTodoList();
             inputTodo.value = "";
 
+            TodoService.getInstance().countList();
             TodoService.getInstance().addLoadSubHeader();
         }
     }
@@ -118,6 +120,7 @@ class TodoService {
 
         this.addAndLoadTodoList();
         this.addPastListClear(this.saveDay);
+        this.countList();
         this.addLoadSubHeader();
     }
 
@@ -162,6 +165,10 @@ class TodoService {
         this.updateLocalStorage();
     }
 
+    countList() {
+        this.listCount = this.todoList.length;
+    }
+
     addAndLoadTodoList() {
         
         const todoListContent = document.querySelector(".todo-list-content");
@@ -194,7 +201,7 @@ class TodoService {
         } else{
             todoListContentHeader.innerHTML = `
                         <h1 class="list-header">
-                            ${subHeaderDate}     TodoList
+                            ${subHeaderDate}     TodoList (total: ${this.listCount})
                         </h1>`
         }  
     }
