@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
-    color: #121212;
+    color: white;
     font-size: 14px;
+    border-radius: 20px;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     
     width: 800px;
     height: 550px;
-    background-color: #e8827f;
+    background-color: #121212;
     overflow: hidden;
 }
 
@@ -26,19 +27,19 @@ body {
 .main-header {
     margin-top: 10px;
     font-size: 60px;
-
-    background-color: #e8827f;
+    text-shadow: 5px 2px #dbdbdb86;
+    background-color: #121212;
     position: relative;
     animation-name: example;
     animation-duration: 4s;
 }
 
 @keyframes example {
-    0%   {background-color:#e8827f; right:500px; top:0px;}
-    25%  {background-color:#e8827f; right:400px; top:0px;}
-    50%  {background-color:#e8827f; right:300px; top:0px;}
-    75%  {background-color:#e8827f; right:200px; top:0px;}
-    100% {background-color:#e8827f; right:0px; top:0px;}
+    0%   {background-color:#121212; right:500px; top:0px;}
+    25%  {background-color:#121212; right:400px; top:0px;}
+    50%  {background-color:#121212; right:300px; top:0px;}
+    75%  {background-color:#121212; right:200px; top:0px;}
+    100% {background-color:#121212; right:0px; top:0px;}
   }
 
 .input-todo-content {
@@ -54,21 +55,23 @@ body {
     height: 70px;
     border: none;
     border-radius: 20px;
+    font-size: 20px;
 }
 
 .plus-button {
     border: none;
-    background-color: #e8827f;
+    background-color: #121212;
 
     cursor: pointer;
 }
 
 .plus-button .fa-circle-plus {
     font-size: 40px;
+    box-shadow: 0px 0px 5px 1px #dbdbdb;
 }
 
 .plus-button .fa-circle-plus:hover {
-    color: rgb(58, 50, 50);
+    color: #dbdbdb;
 }
 
 .todo-list-content-header {
@@ -128,7 +131,7 @@ body {
     height: 100%;
 
     border: none;
-    background-color: #e8827f;
+    background-color: #121212;
 
     font-family: 'Dongle', sans-serif;
     font-size: 40px;
@@ -145,7 +148,7 @@ body {
     height: 100%;
 
     border: none;
-    background-color: #e8827f;
+    background-color: #121212;
     color: white;
 
     font-family: 'Dongle', sans-serif;
@@ -163,7 +166,6 @@ body {
 .button-content {
    margin-top: 20px;
    width: 90%;
-
    display: flex;
    justify-content: end;
 }
@@ -172,8 +174,8 @@ body {
     margin-left: 10px;
 
     border: none;
-    background-color: pink;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 15px;
 
     cursor: pointer;
@@ -194,4 +196,8 @@ body {
 .delete-button:hover{
     color: rgb(192, 197, 201);
 
+}
+
+.list-header{
+    color: #dbdbdb
 }

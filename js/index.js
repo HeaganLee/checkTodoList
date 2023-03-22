@@ -1,6 +1,5 @@
 let todoList = new Array();
 let saveDay = "";
-let listCount = "";
 
 class TodoEvent {
     static #instance = null;
@@ -18,11 +17,8 @@ class TodoEvent {
             if(inputTodo.value == "") {
                 return;
             }
-
             TodoService.getInstance().addTodoList();
             inputTodo.value = "";
-
-            TodoService.getInstance().countList();
             TodoService.getInstance().addLoadSubHeader();
         }
     }
@@ -78,17 +74,15 @@ class TodoEvent {
             editButton.onclick = () => {
                todoTexts[index].disabled = false;
                todoTexts[index].focus();
-            }
-        });
 
-        todoTexts.forEach((todoText, index) => {
-            todoText.onkeyup = () => {
+               todoText[index].onkeyup = () => {
                 if(window.event.keyCode == 13){
-                    const editText = todoText.value;
+                    const editText = todoText[index].value;
                     TodoService.getInstance().editSaveTodoList(editText, index);
-                    todoText.disabled = true;
+                    todoText[index].disabled = true;
                 }
             }
+        }
         });
     }
 
@@ -120,7 +114,6 @@ class TodoService {
 
         this.addAndLoadTodoList();
         this.addPastListClear(this.saveDay);
-        this.countList();
         this.addLoadSubHeader();
     }
 
@@ -165,10 +158,6 @@ class TodoService {
         this.updateLocalStorage();
     }
 
-    countList() {
-        this.listCount = this.todoList.length;
-    }
-
     addAndLoadTodoList() {
         
         const todoListContent = document.querySelector(".todo-list-content");
@@ -195,15 +184,20 @@ class TodoService {
         const todoListContentHeader = document.querySelector(".todo-list-content-header");
         const nowDate = new Date();
         const subHeaderDate = `${nowDate.getFullYear()}-${nowDate.getMonth()+1}-${nowDate.getDate()}`
+        var count = this.todoList
 
         if(this.todoList == "") {
-            todoListContentHeader.innerHTML = ``
+            todoListContentHeader.innerHTML = `
+                        <h1 class="list-header">
+                            ${subHeaderDate}     TodoList (total : ${count.length})
+                        </h1>`
         } else{
             todoListContentHeader.innerHTML = `
                         <h1 class="list-header">
-                            ${subHeaderDate}     TodoList (total: ${this.listCount})
+                            ${subHeaderDate}     TodoList (total : ${count.length})
                         </h1>`
         }  
+
     }
 
     addPastListClear(saveDay) {
