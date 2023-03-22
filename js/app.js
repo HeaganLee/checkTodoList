@@ -7,5 +7,6 @@ window.onload = () => {
     TodoEvent.getInstance().addEventEdit();
     TodoEventVideo.getInstance().addEventShowVideo();
     TodoEventVideo.getInstance().addEventCloseVideo();
+    Calendar.getInstance().buildCalendar();
     TodoService.getInstance();
 }
