@@ -75,11 +75,11 @@ class TodoEvent {
                todoTexts[index].disabled = false;
                todoTexts[index].focus();
 
-               todoText[index].onkeyup = () => {
+               todoTexts[index].onkeyup = () => {
                 if(window.event.keyCode == 13){
-                    const editText = todoText[index].value;
+                    const editText = todoTexts[index].value;
                     TodoService.getInstance().editSaveTodoList(editText, index);
-                    todoText[index].disabled = true;
+                    todoTexts[index].disabled = true;
                 }
             }
         }
@@ -186,17 +186,11 @@ class TodoService {
         const subHeaderDate = `${nowDate.getFullYear()}-${nowDate.getMonth()+1}-${nowDate.getDate()}`
         var count = this.todoList
 
-        if(this.todoList == "") {
-            todoListContentHeader.innerHTML = `
+        todoListContentHeader.innerHTML = `
                         <h1 class="list-header">
                             ${subHeaderDate}     TodoList (total : ${count.length})
                         </h1>`
-        } else{
-            todoListContentHeader.innerHTML = `
-                        <h1 class="list-header">
-                            ${subHeaderDate}     TodoList (total : ${count.length})
-                        </h1>`
-        }  
+        
 
     }
 
